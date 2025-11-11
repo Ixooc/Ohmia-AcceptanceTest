@@ -6,28 +6,28 @@ Feature: Iniciar sesión
   Scenario Outline: Iniciar sesión con los datos registrados
     Given el responsable del hogar ya se registró y tiene una cuenta
     And tiene la aplicación abierta
-    When llena los apartados <campo_correo> y <campo_contrasena>
-    And presiona el botón <boton_iniciar_sesion>
-    Then el usuario es dirigido a la sección <seccion_destino>
+    When llena los apartados <campo-correo> y <campo-contrasena>
+    And presiona el botón <boton-iniciar-sesion>
+    Then el usuario es dirigido a la sección <seccion-destino>
 
     Examples: Variables de entrada
-      | campo_correo | campo_contrasena | boton_iniciar_sesion |
+      | campo-correo | campo-contrasena | boton-iniciar-sesion |
       | "Correo"     | "Contraseña"     | "Iniciar sesión"     |
 
     Examples: Variables de salida
-      | seccion_destino  |
+      | seccion-destino  |
       | "Menú principal" |
 
   Scenario Outline: Iniciar sesión con Google
     Given el responsable del hogar ya se registró y tiene una cuenta
     And tiene la aplicación abierta
-    When presiona el botón <boton_google>
-    Then el usuario es dirigido a la sección <seccion_destino>
+    When presiona el botón <boton-google>
+    Then el usuario es dirigido a la sección <seccion-destino>
 
     Examples: Variables de entrada
-      | boton_google                |
+      | boton-google                |
       | "Iniciar sesión con Google" |
 
     Examples: Variables de salida
-      | seccion_destino  |
+      | seccion-destino  |
       | "Menú principal" |
