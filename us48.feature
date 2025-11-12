@@ -1,4 +1,4 @@
-
+Feature: Actualización de información de cuenta
   Scenario Outline: Actualización de correo
     Given el usuario tiene un correo asociado a su cuenta
     When accede a <seccion-configuracion>
